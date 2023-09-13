@@ -1790,7 +1790,7 @@ input, select, textarea {
 
 	#nav {
 		text-align: center;
-		height: 4.25em;
+		height: 3.75em;
 		cursor: default;
 	}
 
@@ -1801,7 +1801,7 @@ input, select, textarea {
 			width: 1em;
 			height: 1em;
 			line-height: 0.9em;
-			font-size: 2.5em;
+			font-size: 2.2em;
 			margin: 0 0.25em 0 0.25em;
 			opacity: 0.35;
 			outline: 0;
@@ -2195,7 +2195,8 @@ input, select, textarea {
     opacity: 0; }
   
   .gallery .cc-porfolio-image figure .h4,
-  .gallery .cc-porfolio-image figure h5 {
+  .gallery .cc-porfolio-image figure h5,
+  .gallery .cc-porfolio-image figure i {
     margin: 0; }
   
   .gallery figure.cc-effect figcaption::before,
@@ -2220,14 +2221,16 @@ input, select, textarea {
     transform: scale(0, 0);
     transform-origin: 100% 0; }
   
-  .gallery figure.cc-effect .h4 {
+  .gallery figure.cc-effect .h4,
+  .gallery figure.cc-effect i {
     margin-top: 25%;
 	text-transform: uppercase;
 	letter-spacing: -0.015em;
     transition: transform 0.35s;
     opacity: 0; }
     @media (max-width: 480px) {
-      .gallery figure.cc-effect .h4 {
+      .gallery figure.cc-effect .h4,
+	  .gallery figure.cc-effect i {
         font-size: 14px; } }
   
   .gallery figcaption .container {
@@ -2245,7 +2248,8 @@ input, select, textarea {
     opacity: 0; }
   
   .gallery figure.cc-effect img,
-  .gallery figure.cc-effect .h4 {
+  .gallery figure.cc-effect .h4,
+  .gallery figure.cc-effect i {
     transform: scale(1.06, 1.06); }
   
   .gallery figure.cc-effect img,
@@ -2268,6 +2272,7 @@ input, select, textarea {
   
   .gallery figure.cc-effect:hover .h4,
   .gallery figure.cc-effect:hover .h5,
+  .gallery figure.cc-effect:hover i ,
   .gallery figure.cc-effect:hover button {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -2276,11 +2281,12 @@ input, select, textarea {
   .gallery figure.cc-effect:hover figcaption::after,
   .gallery figure.cc-effect:hover .h4,
   .gallery figure.cc-effect:hover .h5,
+  .gallery figure.cc-effect:hover i ,
   .gallery figure.cc-effect:hover img {
     transition-delay: 0.15s; }
 
 .img-raised {
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.); }
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.1); }
 
 
 /* BG */
