@@ -18,7 +18,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, .gallery {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -27,7 +27,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, .gallery {
 	display: block;}
 
 body {
@@ -99,6 +99,19 @@ input, select, textarea {
 				padding: 1.25em 0 0 1.25em;
 			}
 
+			.row .no-gutters {
+				margin: 0;
+				padding: 0;	
+			}
+
+			.row > .col-6 {
+				width: 50%;
+			}
+
+			.row > .col-12 {
+				width: 100%;
+			}
+
 		
 
 		@media screen and (max-width: 1680px) {
@@ -123,7 +136,42 @@ input, select, textarea {
 						padding: 1.25em 0 0 1.25em;
 					}
 
+					.row .no-gutters {
+						margin: 0;
+						padding: 0;	
+					}
+
 		}
+
+		@media screen and (max-width: 1280px) {
+
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				align-items: stretch;
+			}
+
+				.row > * {
+					box-sizing: border-box;
+				}
+			
+				.row {
+					margin-top: -1.25em;
+					margin-left: -1.25em;
+				}
+
+					.row > * {
+						padding: 1.25em 0 0 1.25em;
+					}
+
+					.row .no-gutters {
+						margin: 0;
+						padding: 0;	
+					}
+
+			}
+
 
 		@media screen and (max-width: 736px) {
 
@@ -146,6 +194,12 @@ input, select, textarea {
 					.row > * {
 						padding: 1.25em 0 0 1.25em;
 					}
+
+					.row .no-gutters {
+						margin: 0;
+						padding: 0;	
+					}
+
 		}
 
 		@media screen and (max-width: 360px) {
@@ -169,6 +223,12 @@ input, select, textarea {
 					.row > * {
 						padding: 1.25em 0 0 1.25em;
 					}
+
+					.row .no-gutters {
+						margin: 0;
+						padding: 0;	
+					}
+
 		}
 
 
@@ -266,22 +326,24 @@ input, select, textarea {
 	
 		h2 {
 			font-size: 1.5rem;
-			line-height: 1.4;
+			line-height: 1.4em;
 			letter-spacing: 0.5rem;
 		}
 	
 		h3 {
 			font-size: 1.2rem;
+			margin: 1em 0 0 0;
 		}
 	
 		h6 {
 			font-size: 1rem;
+			font-weight: 300;
 		}
 	
 
 	/* ADDED */
 		h4, .h4 {
-			font-weight: 400;
+			font-weight: 600;
 			font-size: 1.8em;
 			line-height: 1.45em;
 			margin-top: 30px;
@@ -300,7 +362,7 @@ input, select, textarea {
 				font-size: 1.0em; }
 
 		.title {
-			font-weight: 400;}
+			font-weight: 300;}
 			.title.title-up {
 				text-transform: uppercase; }
 				.title.title-up a {
@@ -311,7 +373,7 @@ input, select, textarea {
 		
 		.category {
 			text-transform: uppercase;
-			font-weight: 400;
+			font-weight: 300;
 			 
 			color: #9A9A9A; }
 
@@ -319,8 +381,33 @@ input, select, textarea {
 		.card-description,
 		.footer-big h5 {
 			color: #6a6a6a;
-			font-weight: 400; }
+			font-weight: 300; }
 	/* END ADDED */
+
+	a:link {
+		color: #a2ade2;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	a:visited {
+		color: #cfa2e2;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		color: #a2d0e2;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	a:active {
+		color: #77bad4;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
 
 
 	blockquote {
@@ -615,7 +702,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 45em;
+		width: 60em;
 		margin: 0 auto;
 		min-height: 100vh;
 		max-width: 100%;
@@ -658,7 +745,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#wrapper {
-				padding: 1.5em 0;
+				padding: 2em 0;
 				max-width: calc(100% - 8em);
 			}
 
@@ -850,7 +937,7 @@ input, select, textarea {
 						margin: 2rem 0 0 0;
 					}
 
-				@media screen and (max-width: 980px) {
+				@media screen and (max-width: 736px) {
 
 					#main > .panel.intro {
 						-moz-flex-direction: column;
@@ -860,26 +947,14 @@ input, select, textarea {
 						height: auto;
 					}
 
-						#main > .panel.intro .pic {
-							height: 25em;
-							width: 100%;
-						}
-
-						#main > .panel.intro header {
-							padding: 4em;
-							text-align: center;
-						}
-
-				}
-
-				@media screen and (max-width: 736px) {
-
 					#main > .panel.intro .pic {
 						height: 20em;
+						width: 100%;
 					}
 
 					#main > .panel.intro header {
 						padding: 2.75em 2em 2.5em 2em;
+						text-align: center;
 					}
 
 						#main > .panel.intro header p {
@@ -900,19 +975,25 @@ input, select, textarea {
 .gallery .cc-porfolio-image figure {
     position: relative;
     overflow: hidden;
-    text-align: center; }
+    text-align: center;
+	margin: 1em 0 1em 0;
+ }
   
   .gallery .cc-porfolio-image figure img {
     position: relative;
     display: block;
     max-width: 100%;
-    opacity: 1; }
+    opacity: 1; 
+	margin-left: auto;
+	margin-right: auto;
+}
   
   .gallery .cc-porfolio-image figure figcaption {
     position: absolute;
     color: #fff;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden; 
+}
   
   .gallery .cc-porfolio-image figure figcaption,
   .gallery .cc-porfolio-image figure figcaption > a {
@@ -941,18 +1022,18 @@ input, select, textarea {
     opacity: 0; }
   
   .gallery figure.cc-effect figcaption::before {
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
+    top: 1em;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
     transform: scale(0, 0);
     transform-origin: 0 0; }
   
   .gallery figure.cc-effect figcaption::after {
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
+    top: 1em;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
     transform: scale(0, 0);
     transform-origin: 100% 0; }
   
@@ -960,32 +1041,29 @@ input, select, textarea {
   .gallery figure.cc-effect i {
     margin-top: 25%;
 	text-transform: uppercase;
-	 
     transition: transform 0.35s;
     opacity: 0; }
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
       .gallery figure.cc-effect .h4,
 	  .gallery figure.cc-effect i {
-        font-size: 14px; } }
+        font-size: 1em; } } */
   
   .gallery figcaption .container {
     position: absolute;
     width: 100%;
-    bottom: 20px; }
+    bottom: 2em; }
   
   .gallery figure.cc-effect .h5,
   .gallery figure.cc-effect button {
     padding: 0.5em 2em;
     text-transform: none;
-     
-	
     transition: transform 0.35s;
     opacity: 0; }
   
   .gallery figure.cc-effect img,
   .gallery figure.cc-effect .h4,
   .gallery figure.cc-effect i {
-    transform: scale(1.06, 1.06); }
+    transform: scale(1.05, 1.05); }
   
   .gallery figure.cc-effect img,
   .gallery figure.cc-effect figcaption::before,
@@ -1096,4 +1174,6 @@ input, select, textarea {
 	body.is-preload #bg:before {
 		background-color: #000000;
 	}
+
+
 
