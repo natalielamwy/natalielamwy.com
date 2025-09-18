@@ -85,6 +85,10 @@ $(document).ready(function() {
 					$link
 						.addClass('active');
 
+				// Add body class for active panel
+					$body.removeClass('panel-home panel-general panel-research panel-outreach panel-education panel-gallery panel-contact');
+					$body.addClass('panel-' + $panel.attr('id'));
+
 				// Reset scroll.
 					$window.scrollTop(0);
 
@@ -123,6 +127,10 @@ $(document).ready(function() {
 
 				// Activate target link.
 					$link.addClass('active');
+
+				// Add body class for active panel
+					$body.removeClass('panel-home panel-general panel-research panel-outreach panel-education panel-gallery panel-contact');
+					$body.addClass('panel-' + $panel.attr('id'));
 
 				// Set max/min height.
 					$main
